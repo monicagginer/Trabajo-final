@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 280px;
+  background-image: url(img/fondo_estrellado.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  top: 70px;
+}
+
+main {
+  height: 800px;
+  background-color: gray;
+}
+footer {
+  height: 80px;
+  background-color: darkgrey;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
