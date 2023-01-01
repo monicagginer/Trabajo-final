@@ -22,12 +22,75 @@ header {
 }
 
 main {
-  height: 800px;
-  background-color: gray;
+  
+  background-color: rgb(54, 110, 146);
 }
 footer {
-  height: 80px;
-  background-color: darkgrey;
+  height: 90  px;
+  background-color: #FFFEEF;
   text-align: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 19px;
+  color: darkgrey;
+  border-top: solid 1px rgb(223, 223, 223);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > a > img {
+  width: 40px;
+  height: auto;
+}
+
+.card{
+  border: solid 2px black;
+  margin: auto;
+  width: 270px;
+  height: 295px;
+  border-radius: 2%;
+  background-color: #FFFEEF;
+
+}
+.card-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: sans-serif;
+  border-bottom: solid 1px black;
+}
+.card-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+}
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+.card-description {
+  text-align: left;
+  
+}
+.card-description > p{
+  border-top: solid 1px black;
+  padding-left: 7px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+  padding: 20px;
+  
+}
+
+hr {
+  width: 200px;
+  margin-bottom: 5px;
 }

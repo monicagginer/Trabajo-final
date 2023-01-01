@@ -1,16 +1,34 @@
-const URL_API = "http://rickandmortyapi.com/character";
-
 const $container = document.getElementById("container");
 
+const URL_API = "https://rickandmortyapi.com/api/character";
 
-const user = fetch(URL_API);
+console.log(URL_API);
 
-user
-  .then((res) => res.json())
-  .then((datosRecibidos) => {
-    const user = datosRecibidos.results["0"];
-    console.log(datosRecibidos);
-    $container.innerHTML = `
-    <h2>Nombre: ${user.name.first} ${user.name.last}</h2>;
-    <img class="profile-picture" src="${user.picture.large}" alt="User profile picture"/> `;
+fetch(URL_API)
+  .then((response) => response.json())
+  .then((data) => {
+    const characters = data.results;
+
+    for (let character of characters) {
+      console.log(character.name);
+      $container.innerHTML += `
+
+      <div class="card">
+<div class="card-title">
+  <p>${character.name}</p>
+</div>
+<div class="img-container">
+  <img class="card-img" src="${character.image}
+  " alt="Foto de ${character.name}
+  ">
+</div>
+<div class="card-description">
+  <p>${character.gender}</p>
+  <p>${character.location.name}</p>  
+  <p>${character.status}</p>
+</div>
+</div>
+  
+`;
+    }
   });
